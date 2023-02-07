@@ -20,13 +20,31 @@ My favorite food is {{@food}}, and my favorite color is {{@color}}.</p>
 <p>A circle with a radius of {{@radius}} has a circumference of
     {{round(2 * pi() * @radius, 3)}}</p>
 
-
-
 <h3>Some fruits:</h3>
 <ul>
 <repeat group="{{@fruits}}" value="{{@fruit}}">
 <li>{{@fruit}}</li>
 </repeat>
 </ul>
+
+<h4>Choose a Color</h4>
+<repeat group="{{@colors}}" value="{{@color}}">
+    <label><input type="radio" name="color" value="{{@color}}">{{ucfirst(@color)}}</label>
+</repeat>
+
+<h4>Cupcakes</h4>
+
+<repeat group="{{@cupcakes}}" key="{{@key}}" value="{{@cupcake}}">
+    <label><input type="checkbox" name="flavors[]" value="{{@key}}">{{@cupcake}}</label>
+</repeat>
+
+
+<h4>Age</h4>
+<check if="{{@age > 30}}">
+    <true><p>You are Mature</p></true>
+    <false><p>You are a spring chicken</p></false>
+</check>
+
+
 </body>
 </html>

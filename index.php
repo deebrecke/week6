@@ -38,8 +38,17 @@ $f3->route('GET /', function($f3){
 //        echo $fruit;
 //    }
 
-    $f3->set('colors', array("red", "blue" "yellow"));
+    $f3->set('colors', array("red", "blue", "yellow"));
 
+
+    $cupcakes = array("chocolate"=>"Chocolate Ganache", "strawberry"=>"Strawberry Shortcake",
+        "maple"=>"Maple Walnut");
+
+    $f3->set('cupcakes', $cupcakes);
+
+
+
+    $f3->set('age', 30);
 
 
 
